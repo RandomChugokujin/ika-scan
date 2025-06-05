@@ -1,0 +1,27 @@
+ika-scan
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file (Go 1.18+)
+go.work
+go.work.sum
+# Vendor directory
+/vendor/
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
