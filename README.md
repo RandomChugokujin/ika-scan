@@ -8,7 +8,7 @@ While this can be achieved with proxychains and Nmap, the performance is too slo
 ## Build
 
 ```
-$ git clone <INSERT Github URL>
+$ git clone https://github.com/RandomChugokujin/ika-scan
 $ cd ika-scan
 $ go build
 ```
