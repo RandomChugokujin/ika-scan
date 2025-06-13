@@ -20,7 +20,6 @@ type Options struct {
 	Url 	   	string `short:"u" long:"url" description:"The URL of the SQUID proxy (required)" required:"true"`
 	Ports      	string `short:"p" long:"ports" description:"A list of ports to scan, support both commas and ranges with - (required)." required:"true"`
 	NumWorkers 	int    `short:"w" long:"num-workers" default:"100" description:"Number of workers for port scanning, default is 100."`
-	// Verbose  	bool   `short:"v" long:"verbose" default:"False" description:"Enable verbose output."`
 }
 
 func port_parse(port_arg string) ([]uint16, error) {
@@ -129,9 +128,6 @@ ___) (___|  /  \ \| )   ( |       /\____) || (____/\| )   ( || )  \  |
 			}
 			defer r.Body.Close()
 			openPorts = append(openPorts, p)
-			// if opts.Verbose{
-			// 	fmt.Printf("Port %d found!\n", p)
-			// }
 		}(port)
 	}
 	wg.Wait()
