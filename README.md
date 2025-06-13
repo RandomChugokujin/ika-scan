@@ -15,22 +15,24 @@ $ go build
 
 ## Usage
 ```
-$ ika-scan
+$ ika-scan -h
 Usage:
   ika-scan [OPTIONS]
 
 Application Options:
   -u, --url=         The URL of the SQUID proxy (required)
-  -w, --num-workers= Number of workers for port scanning, default is 100 (default: 100)
-  -p, --num-ports=   Maximum number of ports scanned, default is 1000 (default: 1000)
+  -p, --ports=       A list of ports to scan, support both commas and ranges with -
+                     (required).
+  -w, --num-workers= Number of workers for port scanning. (default: 100)
 
 Help Options:
   -h, --help         Show this help message
+
 ```
 
 Example:
 ```
-$ ika-scan -u http://10.10.108.208:3128 -p 10000
+$ ika-scan -u http://10.10.108.208:3128 -p 22,80,443,9000-10000
 ```
 
 ## Acknowledgement

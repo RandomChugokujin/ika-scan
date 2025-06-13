@@ -18,8 +18,8 @@ import (
 
 type Options struct {
 	Url 	   	string `short:"u" long:"url" description:"The URL of the SQUID proxy (required)" required:"true"`
-	Ports      	string `short:"p" long:"ports" description:"A list of ports to scan, support both commas and ranges with - (required)." required:"true"`
-	NumWorkers 	int    `short:"w" long:"num-workers" default:"100" description:"Number of workers for port scanning, default is 100."`
+	Ports      	string `short:"p" long:"ports" description:"A list of ports to scan, support both commas and ranges with '-' (required)." required:"true"`
+	NumWorkers 	int    `short:"w" long:"num-workers" default:"100" description:"Number of workers for port scanning."`
 }
 
 func port_parse(port_arg string) ([]uint16, error) {
